@@ -1,0 +1,26 @@
+/* 1-> Um seletor de tipo e uma declaração*/
+div {
+    background-color: blue;
+    border-radius: 3%;
+    align-items: center;
+}
+
+/* 2-> Um seletor descendente e uma declaração*/
+div p {
+    color: red;
+    background-color: white;
+}
+
+/* 3-> Um seletor de classe e uma declaração*/
+.Titulos {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 4 -> Um seletor de classe e uma declaração*/
+#paragrafo_unico {
+    color: white;
+    background-color: blueviolet;
+}
+
+
