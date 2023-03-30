@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+    <Script>
+        function soma(x, y) {
+            alert(x+y);
+        }
+        function subtracao(x, y) {
+            alert(x-y);
+        }
+        function divisao(x, y) {
+            alert(x/y);
+        }
+        function multiplicacao(x, y) {
+            alert(x*y);
+        }
+        function calcular() {
+            escolha = document.getElementById('options').value;
+            x = document.getElementById('num1').value;
+            y = document.getElementById('num2').value;
+            x = parseInt(x);
+            y = parseInt(y);
+            if(escolha == 'soma') {
+                soma(x, y);
+            } else if(escolha == 'subtracao') {
+                subtracao(x,y);
+            } else if(escolha == 'divisao') {
+                divisao(x,y);
+            } else if(escolha == 'multiplicacao') {
+                multiplicacao(x,y);
+            }
+        }
+    </Script>
+</head>
+<body>
+    <label for="numero1">Numero 1: <input type="text" id="num1"></label>
+    <br>
+    <label for="numero2">Numero 2: <input type="text" id="num2"></label>
+    <br>
+    Operação : 
+    <select name="combobox" id="options">
+        <option value="soma">Soma</option>
+        <option value="subtracao">Subtração</option>
+        <option value="divisao">Divisão</option>
+        <option value="multiplicacao">Multiplicação</option>
+    </select>
+    <br>
+    <input type="Submit" id="submit" value="Calcular" onclicK="calcular()">
+</body>
+</html>
