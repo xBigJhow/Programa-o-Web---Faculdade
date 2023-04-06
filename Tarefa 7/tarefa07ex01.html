@@ -1,0 +1,32 @@
+<!-- Criar um formulario em que o valor de A, troque com B quando clicar o botão -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 07 Ex01 </title>
+    <script>
+        function trocarValor(){
+            var a = document.getElementById('value1').value;
+            var b = document.getElementById('value2').value;
+            var aux = a;
+            a = b;
+            b = aux;
+            document.getElementById('value1').value = a;
+            document.getElementById('value2').value = b;
+        }
+
+    </script>
+</head>
+<body>
+    <form action="">
+        A: <input type="text" name="value1" id="value1">
+        <input type="button" value="<>"onclick="trocarValor()">
+        B: <input type="text" name="value2" id="value2">
+
+    </form>
+    
+
+</body>
+</html>

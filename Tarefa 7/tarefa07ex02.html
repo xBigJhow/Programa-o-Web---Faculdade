@@ -1,0 +1,45 @@
+<!-- Formulario, que ao clicar no botão gerar, aparecerá a tabuada do numero escolhido. Caso clicar em gerar novamente, apagará a antiga e mostrará a nova tabuada escolhida. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 03 ex 02</title>
+    <script>
+        
+        function tabuada(){
+            var x = document.getElementById("select").value;
+            var tabuada = document.getElementById("mostraTabuada");
+            tabuada.innerHTML = "";
+            for(let i=0; i<=10; i++) {
+                let linha = x + " x " + i + " = " + (i*x);
+                tabuada.innerHTML += linha + "<br>";
+            }
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    <form action="">
+        Valor: 
+        <select name="select" id="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <input type="button" value="Gerar" onclick="tabuada()">
+            <div id="mostraTabuada"></div>
+        </select>
+    </form>
+</body>
+</html>
