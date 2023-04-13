@@ -1,0 +1,31 @@
+<!--1)Faça um algoritmo que ao usuário digitar um valor em um campo de texto, o mesmo é validado. Caso seja um número, o mesmo deve ser removido do campo.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 08</title>
+
+    <script>
+        function valida(){
+            //recebo o que o usuario digitou
+            var validador = document.getElementById("texto").value;
+            //transformo em inteiro
+            validador = parseInt(validador);
+            //faco a condicao se é ou nao um numero
+            if(!isNaN(validador)){
+                //caso for, o input fica sem nada!
+                document.getElementById("texto").value = "";
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <label for="">
+        <input type="text" name="texto" id="texto" onchange="valida()">
+    </label>
+</body>
+</html>
